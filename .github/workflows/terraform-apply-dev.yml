@@ -33,13 +33,13 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform init
-        working-directory: envs/dev
         run: terraform init -backend-config=backend.hcl
+        working-directory: envs/dev
 
       - name: Terraform plan
-        working-directory: envs/dev
         run: terraform plan -out=tfplan
+        working-directory: envs/dev
 
       - name: Terraform apply
-        working-directory: envs/dev
         run: terraform apply -auto-approve tfplan
+        working-directory: envs/dev
