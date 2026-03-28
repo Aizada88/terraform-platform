@@ -1,7 +1,13 @@
 module "dynamodb" {
   source = "../../modules/dynamodb"
-}
 
-module "rds" {
-  source = "../../modules/rds"
+  table_name = "my-table"
+  hash_key   = "id"
+
+  attributes = [
+    {
+      name = "id"
+      type = "S"
+    }
+  ]
 }
