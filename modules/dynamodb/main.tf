@@ -15,9 +15,6 @@ resource "aws_dynamodb_table" "this" {
     enabled = true
   }
 
-   
-    enabled = true {
-  }
 
   tags = merge(var.common_tags, {
     Name = var.table_name
