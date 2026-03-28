@@ -15,8 +15,8 @@ resource "aws_dynamodb_table" "this" {
     enabled = true
   }
 
-  server_side_encryption {
-    enabled = true
+   
+    enabled = true {
   }
 
   tags = merge(var.common_tags, {
