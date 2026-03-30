@@ -1,7 +1,7 @@
-bucket         = "CHANGE-ME-terraform-state-bucket"
+bucket         = "aiza-terraform-state-bucket26"
 key            = "terraform-platform/prod/terraform.tfstate"
 region         = "us-east-2"
 encrypt        = true
 
-dynamodb_table = "terraform-lock"
+dynamodb_table = "terraform-state-locks"
 use_lockfile   = true
