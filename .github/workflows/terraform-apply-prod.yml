@@ -27,7 +27,7 @@ jobs:
 
       - name: Terraform init
         working-directory: envs/prod
-        run: terraform init -backend-config=backend.hcl
+        run: run: terraform init -reconfigure -backend-config=backend.hcl
 
       - name: Terraform plan
         working-directory: envs/prod
